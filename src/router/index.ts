@@ -1,3 +1,6 @@
+import AcademyOne from "@/components/layout/academyOne";
+import AcademyThree from "@/components/layout/academyThree";
+import Academytwo from "@/components/layout/academytwo";
 import ArticleOne from "@/components/layout/articleOne";
 import ArticleThree from "@/components/layout/articleThree";
 import ArticleTwo from "@/components/layout/articleTwo";
@@ -55,6 +58,18 @@ export const router = createBrowserRouter([
       {
         path: "/article-one",
         Component: ArticleOne,
+      },
+      {
+        path: "/academy-one",
+        Component: AcademyOne,
+      },
+      {
+        path: "/academy-two",
+        Component: Academytwo,
+      },
+      {
+        path: "/academy-three",
+        Component: AcademyThree,
       },
     ],
   },

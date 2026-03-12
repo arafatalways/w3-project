@@ -1,11 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 /* ================= TYPES ================= */
 type Course = {
   title: string;
   description: string;
   image: string;
+  slug: string;
 };
 
 interface CourseCardProps extends Course {
@@ -25,49 +27,52 @@ const CourseCard: React.FC<CourseCardProps> = ({
   description,
   image,
   index,
+  slug,
 }) => {
   const gradient = gradients[index % gradients.length];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.2 }}
-      viewport={{ once: true }}
-      whileHover={{ y: -10 }}
-      className="relative group h-full"
-    >
-      {/* 🔥 Gradient Glow */}
-      <div
-        className={`absolute -inset-0.5 rounded-2xl blur opacity-20 group-hover:opacity-100 transition duration-500 bg-linear-to-r ${gradient}`}
-      />
+    <Link to={`/courses/${slug}`} className="block h-full">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.2 }}
+        viewport={{ once: true }}
+        whileHover={{ y: -10 }}
+        className="relative group h-full"
+      >
+        {/* 🔥 Gradient Glow */}
+        <div
+          className={`absolute -inset-0.5 rounded-2xl blur opacity-20 group-hover:opacity-100 transition duration-500 bg-linear-to-r ${gradient}`}
+        />
 
-      {/* 🧱 Card */}
-      <div className="relative h-full bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-xl border border-gray-100 dark:border-slate-800 flex flex-col overflow-hidden">
-        {/* Image */}
-        <div className="overflow-hidden rounded-xl mb-4">
-          <img
-            src={image}
-            alt={title}
-            className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        {/* 🧱 Card */}
+        <div className="relative h-full bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-xl border border-gray-100 dark:border-slate-800 flex flex-col overflow-hidden">
+          {/* Image */}
+          <div className="overflow-hidden rounded-xl mb-4">
+            <img
+              src={image}
+              alt={title}
+              className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Text */}
+          <h3 className="text-xl font-bold text-[#0f172a] dark:text-white mb-3">
+            {title}
+          </h3>
+
+          <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
+            {description}
+          </p>
+
+          {/* 🔹 Bottom Gradient Line */}
+          <div
+            className={`mt-auto h-1 w-0 group-hover:w-full transition-all duration-500 rounded-full bg-linear-to-r ${gradient}`}
           />
         </div>
-
-        {/* Text */}
-        <h3 className="text-xl font-bold text-[#0f172a] dark:text-white mb-3">
-          {title}
-        </h3>
-
-        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
-          {description}
-        </p>
-
-        {/* 🔹 Bottom Gradient Line */}
-        <div
-          className={`mt-auto h-1 w-0 group-hover:w-full transition-all duration-500 rounded-full bg-linear-to-r ${gradient}`}
-        />
-      </div>
-    </motion.div>
+      </motion.div>
+    </Link>
   );
 };
 
@@ -75,22 +80,25 @@ const CourseCard: React.FC<CourseCardProps> = ({
 const Academy: React.FC = () => {
   const courses: Course[] = [
     {
-      title: "কিতাব বিভাগ",
+      title: "একাডেমিক বিভাগ",
       description:
         "আলিমিয়াত ও দাওরায়ে হাদিসের গুরুত্বপূর্ণ পড়াশোনা। আরবি ব্যাকরণ, ফিকহ, আকিদা ও তাফসিরের গভীর জ্ঞান অর্জনের সুযোগ।",
       image: "../a-1.webp",
+      slug: "../academy-one",
     },
     {
-      title: "হিফজুল কুরআন",
+      title: "দাওয়া বিভাগ",
       description:
         "নিয়মিত মুরাজাআ ও শুদ্ধ তাজবীদের মাধ্যমে পূর্ণ কুরআন সহিহভাবে হিফজ করার সুযোগ।",
       image: "../a-1.webp",
+      slug: "../academy-two",
     },
     {
-      title: "নূরানী ও নাজেরা",
+      title: "স্কিল ডেভেলপমেন্ট বিভাগ",
       description:
         "শিশুদের জন্য সহজ কুরআন পড়ার ভিত্তি তৈরি। হরফ, মাখরাজ ও শুদ্ধ উচ্চারণ শিক্ষা।",
       image: "../a-1.webp",
+      slug: "../academy-three",
     },
   ];
 

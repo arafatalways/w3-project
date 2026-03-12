@@ -66,7 +66,7 @@ const FooterComponent = () => {
               ইমেইল: annahdaislamicinstitute@gmail.com
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              মোবাইল: +880 1883-595268
+              মোবাইল: +8801350055192
             </p>
           </motion.div>
 
