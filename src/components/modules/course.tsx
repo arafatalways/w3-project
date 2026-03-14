@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Users, ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 
 interface CourseItemData {
   id: number;
@@ -13,20 +14,22 @@ interface CourseItemData {
   price: string;
   imageAlt: string;
   imageUrl: string;
+  slug: string;
 }
 
 const coursesData: CourseItemData[] = [
   {
     id: 1,
-    title: "রিডিং শেখার তরিকা",
+    title: "ইংলিশ স্পোকেন কোর্স",
     subtitle: "(Learn How to Read)",
-    academy: "An Nahda Institute",
+    academy: "An Nahda Skill Development Institute",
     lessons: 6,
     students: 16,
     type: "রেকর্ডেড কোর্স",
     price: "৳৫০০",
     imageAlt: "Reading course thumbnail",
     imageUrl: "../course.png",
+    slug: "../course-one",
   },
   {
     id: 2,
@@ -39,6 +42,7 @@ const coursesData: CourseItemData[] = [
     price: "৳৫০০",
     imageAlt: "Teacher certification course thumbnail",
     imageUrl: "../course-2.png",
+    slug: "../course-two",
   },
   {
     id: 3,
@@ -51,6 +55,7 @@ const coursesData: CourseItemData[] = [
     price: "৳৫০০",
     imageAlt: "Noorani training course thumbnail",
     imageUrl: "../course-3.png",
+    slug: "../course-three",
   },
 ];
 
@@ -135,9 +140,11 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, index }) => {
           <span className={`text-3xl font-extrabold ${color.price}`}>
             {course.price}
           </span>
-          <button className="bg-[#2A4976] text-white px-3 py-2 rounded-md shadow hover:bg-[#315382] transition flex items-center gap-1">
-            বিস্তারিত দেখুন <ArrowRight className="w-4 h-4" />
-          </button>
+          <Link to={`/coursesData/${course.slug}`} className="block h-full">
+            <button className="bg-[#2A4976] text-white px-3 py-2 rounded-md shadow hover:bg-[#315382] transition flex items-center gap-1">
+              বিস্তারিত দেখুন <ArrowRight className="w-4 h-4" />
+            </button>
+          </Link>
         </div>
 
         {/* 🌈 Bottom hover line */}

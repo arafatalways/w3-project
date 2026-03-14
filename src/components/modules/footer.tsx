@@ -65,9 +65,9 @@ const FooterComponent = () => {
             <p className="text-sm text-gray-600 dark:text-gray-400">
               ইমেইল: annahdaislamicinstitute@gmail.com
             </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              মোবাইল: +8801350055192
-            </p>
+            <Link to={"tel: +8801350055192"}>
+              <p className="text-gray-600 dark:text-gray-400">+8801350055192</p>
+            </Link>
           </motion.div>
 
           {/* Other Info */}

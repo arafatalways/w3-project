@@ -4,6 +4,9 @@ import Academytwo from "@/components/layout/academytwo";
 import ArticleOne from "@/components/layout/articleOne";
 import ArticleThree from "@/components/layout/articleThree";
 import ArticleTwo from "@/components/layout/articleTwo";
+import CourseOne from "@/components/layout/courseOne";
+import CourseThree from "@/components/layout/courseThree";
+import CourseTwo from "@/components/layout/courseTwo";
 import FrontLayout from "@/components/layout/FrontLayout";
 import AboutPage from "@/pages/AboutPage";
 import AcademyPage from "@/pages/AcademyPage";
@@ -70,6 +73,18 @@ export const router = createBrowserRouter([
       {
         path: "/academy-three",
         Component: AcademyThree,
+      },
+      {
+        path: "/course-one",
+        Component: CourseOne,
+      },
+      {
+        path: "/course-two",
+        Component: CourseTwo,
+      },
+      {
+        path: "/course-three",
+        Component: CourseThree,
       },
     ],
   },

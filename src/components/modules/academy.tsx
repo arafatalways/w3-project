@@ -83,21 +83,21 @@ const Academy: React.FC = () => {
       title: "একাডেমিক বিভাগ",
       description:
         "আলিমিয়াত ও দাওরায়ে হাদিসের গুরুত্বপূর্ণ পড়াশোনা। আরবি ব্যাকরণ, ফিকহ, আকিদা ও তাফসিরের গভীর জ্ঞান অর্জনের সুযোগ।",
-      image: "../a-1.webp",
+      image: "../a-1.jfif",
       slug: "../academy-one",
     },
     {
       title: "দাওয়া বিভাগ",
       description:
         "নিয়মিত মুরাজাআ ও শুদ্ধ তাজবীদের মাধ্যমে পূর্ণ কুরআন সহিহভাবে হিফজ করার সুযোগ।",
-      image: "../a-1.webp",
+      image: "../a-2.jfif",
       slug: "../academy-two",
     },
     {
       title: "স্কিল ডেভেলপমেন্ট বিভাগ",
       description:
         "শিশুদের জন্য সহজ কুরআন পড়ার ভিত্তি তৈরি। হরফ, মাখরাজ ও শুদ্ধ উচ্চারণ শিক্ষা।",
-      image: "../a-1.webp",
+      image: "../a-3.jfif",
       slug: "../academy-three",
     },
   ];
@@ -112,10 +112,6 @@ const Academy: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium mb-4">
-            📘 একাডেমিক কার্যক্রম
-          </span>
-
           <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a] dark:text-white mb-4">
             আমাদের বিভাগসমূহ
           </h2>

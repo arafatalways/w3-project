@@ -2,7 +2,7 @@ export default function AcademyThree() {
   return (
     <div className="max-w-5xl mx-auto my-10 sm:my-14 md:my-20 px-4 sm:px-6">
       <div className="bg-gray-100 dark:bg-slate-900 p-5 sm:p-8 md:p-12 rounded-2xl border border-gray-200 dark:border-slate-700 shadow-md">
-        <p>
+        <p className="text-justify leading-relaxed text-base sm:text-lg text-gray-500 dark:text-gray-300">
           “An-Nahda Isamic Institute” শুধু শিক্ষা প্রদানেই সীমাবদ্ধ নয়, বরং এটি
           একটি পূর্ণাঙ্গ ক্যারিয়ার ডেভেলপমেন্ট সেন্টার হিসেবে কাজ করছে। এখানে
           রয়েছে বিভিন্ন প্রশিক্ষণ কর্মসূচি, যা শিক্ষার্থীদের পেশাগত দক্ষতা

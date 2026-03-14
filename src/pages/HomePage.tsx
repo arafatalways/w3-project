@@ -12,8 +12,8 @@ export default function HomePage() {
     <div>
       <Hero />
       <Course />
-      <Special />
       <Academy />
+      <Special />
       <ArticleSection />
       <VideoSection />
       <FAQSection />

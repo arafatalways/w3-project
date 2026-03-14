@@ -16,12 +16,12 @@ interface SocialLinkItem {
 const socialLinks: SocialLinkItem[] = [
   {
     icon: <FaWhatsapp size={18} />,
-    href: "https://linkedin.com",
+    href: "https://wa.me/message/TKY5YZPN43KWF1",
     color: "bg-[#21C063] hover:bg-[#21C063]",
   },
   {
     icon: <FaFacebook size={18} />,
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/share/v/1CMRsUUbe9/",
     color: "bg-[#0866FF] hover:bg-[#0866FF]",
   },
   {
@@ -31,7 +31,7 @@ const socialLinks: SocialLinkItem[] = [
   },
   {
     icon: <MdEmail size={18} />,
-    href: "https://twitter.com",
+    href: "annahdaislamicinstitute@gmail.com",
     color: "bg-[#FBBC04] hover:bg-[#FBBC04]",
   },
 ];
@@ -64,7 +64,9 @@ export default function ContactSection() {
             <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-200 mb-2">
               {t("phone", "মোবাইল")}
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">+880 1883-595268</p>
+            <Link to={"tel: +8801350055192"}>
+              <p className="text-gray-600 dark:text-gray-400">+8801350055192</p>
+            </Link>
           </div>
 
           {/* EMAIL */}
