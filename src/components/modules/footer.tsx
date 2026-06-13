@@ -21,7 +21,7 @@ const FooterComponent = () => {
         >
           <div className="shrink-0">
             <div className="w-80 h-56 -mt-3 flex items-center justify-center">
-              <img src="../logo.png" alt="logo" />
+              <img src="../logo.jfif" alt="logo" />
             </div>
           </div>
         </motion.div>

@@ -23,7 +23,11 @@ export default function Header() {
           <div className="flex items-center gap-12">
             <Link className="flex items-center gap-2 text-teal-600" to="/">
               <span className=" text-xl font-bold text-gray-900 dark:text-white ">
-                <img className="w-28 md:w-32" src="../logo.png" alt="logo" />
+                <img
+                  className="w-18 rounded-sm md:w-22"
+                  src="../logo.jfif"
+                  alt="logo"
+                />
               </span>
             </Link>
           </div>
